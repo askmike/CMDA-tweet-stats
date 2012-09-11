@@ -1,0 +1,62 @@
+doctype 5
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title CMDA tweet statistieken
+    link(rel='stylesheet', href='stylesheets/style.css')
+  body
+    h1 CMDA tweet statistieken
+    .half
+      p Hier vind je wat statistieken van alle CMDA tweets.
+      table
+        tbody
+          tr
+            td(scope='row') Tweets
+            td= amountOfTweets
+          tr
+            td(scope='row') Twitteraars
+            td= amountOfUsers
+          tr
+            td(scope='row') Gemeten sinds
+            td= oldest
+          tr
+            td(scope='row') Gemeten voor
+            td= Math.round( timespan ) + ' dagen'
+          tr
+            td(scope='row') Tweets per dag
+            td= ( amountOfUsers / timespan ).toFixed(2)
+    .half
+      p Verdeling gebruikers
+      #users
+    p Tweets per dag
+    #tweetsperday
+    footer Copyleft, 
+      a(href='http://www.mikevanrossum.nl/') Mike van Rossum
+      | . 
+      a#waarom(href='#') Waarom dit?
+      #daarom 
+        p Omdat ik hier nieuwe techniek toepas die ik nog niet kende, namelijk:
+        ul
+          li 
+            a(href='http://expressjs.com/') express.js
+          li 
+            a(href='http://www.mongodb.org/') mongoDB
+          li 
+            a(href='http://mongoosejs.com/') mongoose.js
+          li 
+            a(href='http://jade-lang.com/') jade
+          li 
+            a(href='http://oesmith.github.com/morris.js/') morris.js
+        p Check alle code op 
+          a(href='http://github.com/askmike/CMDA-tweet-stats/') mijn github
+          | .
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='javascripts/raphael-min.js')
+    script(src='javascripts/morris.js')
+    script(src='javascripts/script.js')
+    script
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));

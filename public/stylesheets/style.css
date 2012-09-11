@@ -1,0 +1,48 @@
+body {
+  width:900px;
+  margin: 50px auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.half {
+  padding:25px 50px 25px 0;
+  width:400px;
+  float:left;
+  height:250px;
+  margin-bottom:50px;
+}
+
+#users {
+  height:250px;
+}
+
+#yellow {
+  height:100%;
+  background:yellow;
+}
+
+#tweetsperday {
+  height: 250px;
+}
+
+table {
+  margin-top:50px;
+  width:100%;
+}
+
+td {
+  padding: .7em 1em;
+  border: 1px solid #DDD;
+}
+
+footer {
+  padding:50px 0 0;
+}
+
+#daarom {
+  display:none;
+}
